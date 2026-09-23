@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/keshikast/jenkins-java-prac.git'
+                git branch: 'main', url: 'https://github.com/keshikast/jenkins-java-prac.git'
             }
         }
         stage('Prepare') {
