@@ -6,6 +6,6 @@ public class HelloJenkinsTest {
 
     @Test
     void testMessage() {
-        assertEquals("Hello from Jenkins!", HelloJenkins.message());
+        assertEquals("Hello from Jenkins! change", HelloJenkins.message());
     }
 }
