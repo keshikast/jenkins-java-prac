@@ -7,20 +7,20 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/keshikast/jenkins-java-prac.git'
             }
         }
-        stage('Prepare') {
+        /*stage('Prepare') {
            steps {
                 sh 'cp /Users/keshikasubhashinithirumurugan/jenkins-java-prac/HelloJenkins.java .'
             }
-        }
+        }*/
         stage('Build') {
             steps {
-                sh 'javac HelloJenkins.java'
+                sh 'mvn -B clean package'
             }
         }
 
-        stage('Run') {
+        stage('Test') {
             steps {
-                sh 'java HelloJenkins'
+                sh 'mvn -B test'
             }
         }
     }
